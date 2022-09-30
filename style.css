@@ -1,0 +1,889 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Condensed:wght@700&display=swap");
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: rgb(248, 248, 236);
+  box-shadow: 0px 7px 15px rgba(187, 181, 97, 0.459);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  border-radius: 10px;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(135, 155, 82, 0.603);
+  transition: 0.3s ease-in ;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  transition: 0.3s ease-in;
+  color: black;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #816508;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+#hero {
+  background-image: url("test.png");
+  height: 90vh;
+  /* width: 90%; */
+  background-size: 95%;
+  background-position: top 25% right 0;
+  padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  animation: slideright1 0.3s linear forwards ;
+  transition: ease-in;
+}
+
+@keyframes slideright1 {
+  0% {
+    transform: translate(0, 40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+
+#hero h4 {
+  padding-bottom: 15px;
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+}
+
+#hero h2 {
+  font-size: 65px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bolder;
+  background-color: wheat;
+}
+
+
+#hero h2, #hero h1 {
+  animation: slideright 0.5s linear forwards;
+}
+@keyframes slideright {
+  0% {
+    transform: translate(0, 100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+#hero h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 75px;
+  color: rgb(133, 123, 39);
+  background-color: white;
+}
+
+#hero p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#hero button {
+  background-color: wheat;
+  color: white;
+  font-size: 20px;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 15px;
+  transition: ease-in 0.3s;
+  animation: fadein 0.4s;
+}
+@keyframes fadein{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+#hero button:hover {
+  color: black;
+  box-shadow: inset 250px 0 0 0 white;
+}
+
+#feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba;
+  border: 1px solid wheat;
+  border-radius: 4px;
+  margin: 15px 0;
+  transition: 0.3s ease-in;
+}
+
+#feature .fe-box:hover {
+  box-shadow: 0px 7px 15px rgba(187, 181, 97, 0.459);
+  transform: scale(0.9);
+}
+
+#feature.fe-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#feature .fe-box h6 {
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 4px;
+  color: black;
+  background-color: wheat;
+}
+
+#product1 {
+  text-align: center;
+}
+#product1 h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 40px;
+}
+#product1 p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+}
+
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+#product1 .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 11px 50px;
+  border: 1px solid wheat;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(245, 222, 179, 0);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .pro:hover {
+  box-shadow: 10px 10px 10px wheat;
+}
+
+#product1 .pro img {
+  width: 70%;
+}
+
+#product1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span {
+  font-size: 15px;
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: black;
+  font-size: 20px;
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: wheat;
+}
+
+#product1 .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: green;
+}
+
+#product1 .pro .cart1 {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: wheat;
+  color: black;
+  border: 1px solid green;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-image: url("https://www.frontlist.in/storage/uploads/2021/06/thenewyorker_the-oddest-terms-used-for-antique-books-explained.jpg");
+  height: 40vh;
+  background-position: center;
+  font-size: 50px;
+}
+
+#banner h4 {
+  font-size: 30px;
+}
+.normal {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 15px 30px;
+  column-rule: black;
+  background-color: wheat;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 0 wheat;
+  transition: ease-in 0.5s;
+  outline: 0;
+}
+
+.normal:hover {
+  color: black;
+  box-shadow: inset 250px 0 0 0 white;
+}
+
+#normal {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 30px;
+  column-rule: black;
+  background-color: wheat;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 0 wheat;
+  transition: ease-in 0.5s;
+  outline: 0;
+}
+
+#normal:hover {
+  color: black;
+  box-shadow: inset 250px 0 0 0 white;
+}
+
+.social {
+  /* margin-left: 110px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social img {
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+}
+.invert{
+  filter: invert(1);
+}
+.social a {
+  text-decoration: none;
+}
+footer h4 {
+  font-size: 14px;
+  /* padding-bottom: 20px; */
+}
+
+.copyright {
+  display: flex;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 799px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: wheat;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #hero {
+    width: 80%;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+  #mobile i {
+    color: black;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: black;
+    font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+  #feature {
+    justify-content: center;
+  }
+  #feature .fe-box {
+    margin: 15px 15px;
+  }
+  #product .pro-container {
+    justify-content: center;
+  }
+  #product1 .pro {
+    margin: 15px;
+  }
+}
+@media (max-width: 477px) {
+  .section-p1 {
+    padding: 20px;
+  }
+  #header {
+    padding: 10px 30px;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  #hero {
+    padding: 0 20px;
+    background-position: 55%;
+  }
+  #feature {
+    justify-content: space-between;
+  }
+  #feature .fe-box {
+    width: 155px;
+    margin: 0 0 15px 0;
+  }
+  #product1 .pro {
+    width: 100%;
+  }
+  footer .copyright {
+    text-align: start;
+  }
+  #prodetails .single-pro-details{
+    width: 100%;
+    margin-right: 0px;
+  }
+  #prodetails{
+    display: flex;
+    flex-direction: column;
+  }
+  #prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+  }
+  #blog{
+    padding: 100px 20px 0 20px;
+  }
+  #blog .blog-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #blog .blog-img{
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  #blog .blog-details{
+    width: 100%;
+  }
+  #about-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #form-details{
+    padding: 40px;
+  }
+  #form-details form{
+    width: 50%;
+  }
+  #form-details{
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+  #form-details form{
+    width: 100%;
+  }
+}
+
+
+#page-header{
+  background-image: url('https://thumbs.dreamstime.com/b/ai-242791605.jpg');
+  font-family: lato;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: wheat;
+  font-size: 60px;
+}
+
+#page-header p{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+#prodetails{
+  display: flex;
+  margin-top: 20px;
+}
+#prodetails .single-pro-details{
+  width: 100%;
+  padding-top: 30px;
+}
+#prodetails .single-pro-details h1{
+  font-size: 25px;
+  font-weight: 300;
+}
+
+#prodetails .single-pro-details h2{
+  font-size: 50px;
+  padding: 20px 0 30px 0;
+}
+#prodetails .single-pro-details h3{
+  color: green;
+  font-size: 30px;
+}
+#prodetails .single-pro-details h4{
+  padding: 30px 0 30px 0;
+  font-size: 30px;
+}
+#prodetails .single-pro-details h5{
+  padding: 30px 0 30px 0;
+  font-size: 30px;
+}
+#prodetails .single-pro-details button{
+  /* font-size: 40px; */
+  font-family: lato;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: wheat;
+  color: black;
+}
+
+#prodetails .single-pro-details span{
+  line-height: 25px;
+}
+
+#page-header.blog-header{
+  background-size: 100%;
+  background-image: url('https://thumbs.dreamstime.com/b/business-team-portrait-people-together-women-corporate-members-cartoon-job-boy-entrepreneur-employee-office-group-utter-vector-215233453.jpg');
+}
+
+#blog{
+  transition:  1s ease-in;
+  animation: fadein 0.5s;
+  padding: 150px 150px 0 150px;
+  background-color: rgb(244, 244, 243);
+}
+#blog .blog-box{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 90px;
+  transition: 0.3s;
+}
+
+#blog .blog-img{
+  width: 50%;
+  margin-right: 40px;
+}
+
+#blog img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details{
+  font-size: 20px;
+  width: 50%;
+}
+
+#blog .blog-details h4{
+  font-size: 30px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-bottom: 15px;
+}
+
+#blog .blog-details a{
+  text-decoration: none;
+  font-size: 11px;
+  color: black;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+
+#blog .blog-details a::after{
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+}
+
+#blog .blog-details a:hover{
+  color: wheat;
+}
+
+#blog .blog-details a:hover::after{
+  background-color: wheat;
+}
+.blog-box:hover{
+  transform: scale(1.1);
+}
+
+#page-header.about-header{
+  background-image: url('https://img.freepik.com/free-vector/black-banner-with-yellow-geometric-shapes_1017-32327.jpg?w=2000');
+}
+#page-header.about-header p{
+  font-weight: 400;
+  color: white;
+}
+
+#about-head{
+  
+  background-color: black;
+  color: white;
+  padding: 150px 150px 0 150px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 90px;
+  transition: 0.3s;
+}
+.aboutinfo{
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+.abouttext{
+  font-family: cursive;
+  font-size: 30px;
+  padding-bottom: 100px;
+}
+.aboutinfo h1{
+  padding-top: 40px;
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.followabout{
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+#form-details form{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#form-details form h1{
+  font-size: 40px;
+}
+
+#form-details form h2{
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#form-details form input, #form-details form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid white;
+}
+
+.aboutinfo input, .aboutinfo textarea{
+  font-size: 15px;
+  font-family: cursive;
+}
+
+#page-header.cartheader{
+  background-image: url('https://img.freepik.com/premium-vector/concept-banner-with-realistic-shopping-cart-yellow-background-vector-illustration_548887-101.jpg?w=2000');
+  background-position: 0px -130px;
+}
+
+
+#page-header.cartheader h2{
+  color: rgb(3, 3, 3);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#page-header.cartheader p{
+  color: white;
+  font-weight: 300;
+}
+
+
+.cart-box{
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img{
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  padding: 10px;
+}
+.detail-box{
+  display: grid;
+  row-gap: 0.5rem;
+}
+.cart-product-title{
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.cart-price{
+  font-weight: 700;
+  color: green;
+}
+
+.cart-quantity{
+  border: 1px solid black;
+  outline-color: wheat;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove{
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+.total{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 2px solid wheat;
+}
+.total-title{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.total-price{
+  margin-left: 0.5rem;
+}
+
+.btn-buy{
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background-color: wheat;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-buy:hover{
+  animation: buynow 2s infinite;
+}
+@keyframes buynow {
+  0%{
+    color: black;  
+    background-color: wheat;
+  }
+  50%{
+    box-shadow: inset 250px 0 0 0 white;
+  }
+  100%{
+    box-shadow: inset 250px 0 0 0 wheat;
+  } 
+}
+
+/* 
+.products-container{
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+.product-header{
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-items: flex-start;
+  border-bottom: 4px solid wheat;
+  margin: 0 auto;
+}
+
+.product-title{
+  width: 45%;
+}
+.price1{
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.total1{
+  width: 10%;
+  display: flex;
+  border-bottom: 1px solid lightgoldenrodyellow;
+  align-items: center;
+}
+
+.quantity{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.products
+{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+}
+.products img
+{
+    width: 75px;
+} */
